@@ -21,10 +21,10 @@ def main():
 
 #get the correct answer
             options = {
-                'A': option_a
-                'B': option_b
-                'C': option_c
-                'D': option_d
+                'A': option_a,
+                'B': option_b,
+                'C': option_c,
+                'D': option_d,
             }   #dictionary used to map the letters into the options
 
             correct_answer = ''   
@@ -47,7 +47,8 @@ def main():
             file.write(f'B) {option_b}\n')
             file.write(f'C) {option_c}\n')
             file.write(f'D) {option_d}\n')
-            file.write(f'\nCorrect Answer: {correct_answer}')
+            file.write(f'\nCorrect Answer: {correct_answer}: {correct_answer_text}\n')
+            file.write(f'-' * 40 + '\n')
 
 #ask the user if they want to continue
             continue_prompt = input('Do you want to make another? (yes/any key): ').strip().lower()
