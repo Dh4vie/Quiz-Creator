@@ -4,7 +4,7 @@ def get_filled_prompt(prompt):
         if value:
             return value
         else:
-            print('Input empty. Please try again.')
+            print('\nInput empty. Please try again.\n')
 
 #prompt user to generate questions and answers
 def main():
@@ -32,21 +32,22 @@ def main():
                 correct_answer = input('Enter the correct answer (A/B/C/D): ').strip().upper()
 
                 if correct_answer not in options:
-                    print('Option invalid, A to D only')
+                    print('\nOption invalid, A to D only\n')
                     continue #to ensure valid correct answer input
 
                 correct_answer_text = options[correct_answer]
                 if not correct_answer_text:
-                    print('Answer Empty, please re-check inputs.')
+                    print('\nAnswer Empty, please re-check inputs.\n')
                 else:
                     break #in case the selected answer is SOMEHOW empty
 
 #write the question into file
-            file.write(f'Question: {question}\n')
+            file.write('\n' + '-' * 40 + '\n')
+            file.write(f'Question: {question}\n\n')
             file.write(f'A) {option_a}\n')
             file.write(f'B) {option_b}\n')
             file.write(f'C) {option_c}\n')
-            file.write(f'D) {option_d}\n')
+            file.write(f'D) {option_d}\n\n')
             file.write(f'\nCorrect Answer: {correct_answer}: {correct_answer_text}\n')
             file.write(f'-' * 40 + '\n')
 
