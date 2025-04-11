@@ -11,14 +11,20 @@ with open(filename, 'a') as file: #used 'a' to add the gathered data
         option_d = input('Enter option for D: ')
 
 #get the correct answer
-while correct_answer not in ['A', 'B', 'C', 'D']:
-    correct_answer = input('Enter the correct answer: ').strip().upper()
+        correct_answer = ''   
+        while correct_answer not in ['A', 'B', 'C', 'D']:
+            correct_answer = input('Enter the correct answer: ').strip().upper()
 
 #write the question into file
-file.write(f'Question: {question}\n')
-file.write(f'A) {option_a}\n')
-file.write(f'B) {option_b}\n')
-file.write(f'C) {option_c}\n')
-file.write(f'D) {option_d}\n')
-file write(f'\nCorrect Answer: {correct_answer}')
+            file.write(f'Question: {question}\n')
+            file.write(f'A) {option_a}\n')
+            file.write(f'B) {option_b}\n')
+            file.write(f'C) {option_c}\n')
+            file.write(f'D) {option_d}\n')
+            file.write(f'\nCorrect Answer: {correct_answer}')
+
 #ask the user if they want to continue
+            continue_prompt = input('Do you want to make another? (yes/any key): ').strip().lower()
+            if continue_prompt != "yes":
+                print(f'Exiting Program. Saving data gathered to {filename}')
+                break
