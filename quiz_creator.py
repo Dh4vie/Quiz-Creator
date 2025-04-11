@@ -42,13 +42,13 @@ def main():
                     break #in case the selected answer is SOMEHOW empty
 
 #write the question into file
-            file.write(f'Question: {question}\n')
-            file.write(f'A) {option_a}\n')
-            file.write(f'B) {option_b}\n')
-            file.write(f'C) {option_c}\n')
-            file.write(f'D) {option_d}\n')
-            file.write(f'\nCorrect Answer: {correct_answer}: {correct_answer_text}\n')
-            file.write(f'-' * 40 + '\n')
+                file.write(f'Question: {question}\n')
+                file.write(f'A) {option_a}\n')
+                file.write(f'B) {option_b}\n')
+                file.write(f'C) {option_c}\n')
+                file.write(f'D) {option_d}\n')
+                file.write(f'\nCorrect Answer: {correct_answer}: {correct_answer_text}\n')
+                file.write(f'-' * 40 + '\n')
 
 #ask the user if they want to continue
             continue_prompt = input('Do you want to make another? (yes/any key): ').strip().lower()
