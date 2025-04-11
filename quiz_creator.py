@@ -12,7 +12,7 @@ def main():
 
     with open(filename, 'a') as file: #used 'a' to add the gathered data
         while True:
-            print('Make your desired qustion')
+            print('\nMake your desired qustion')
             question = get_filled_prompt('Enter question: ')
             option_a = get_filled_prompt('Enter option for A: ')
             option_b = get_filled_prompt('Enter option for B: ')
@@ -51,7 +51,7 @@ def main():
             file.write(f'-' * 40 + '\n')
 
 #ask the user if they want to continue
-            continue_prompt = input('Do you want to make another? (yes/any key): ').strip().lower()
+            continue_prompt = input('\nDo you want to make another? (yes/any key): ').strip().lower()
             if continue_prompt != "yes":
                 print(f'Exiting Program. Saving data gathered to {filename}')
                 break
